@@ -1,0 +1,132 @@
+/* 1. RESET Y CONFIGURACIÓN BASE */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* 2. EL CONTENEDOR MAESTRO (Sticky Footer Logic) */
+.site-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ocupa el 100% de la ventana */
+}
+
+/* 3. EL CONTENIDO (Lo que empuja al footer) */
+.content {
+    flex: 1; /* ESTA ES LA CLAVE: se estira para ocupar el espacio vacío */
+    display: flex; /* Para que la lateral y los productos estén uno al lado del otro */
+    padding: 30px 50px;
+    gap: 30px;
+}
+
+/* 4. ENCABEZAMIENTO */
+.encabezamiento {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    margin-right: 15px;
+}
+
+.links a {
+    font-weight: bold;
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.links a:hover {
+    color: #ffcccc;
+}
+
+/* 5. BARRA LATERAL (Por si decides des-comentarla) */
+.sidebar {
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    height: fit-content; /* Para que no se estire de más */
+}
+
+.category-header {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.category-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category-list li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.h1{
+    align-items: center;
+}
+
+/* 6. CUADRÍCULA DE PRODUCTOS */
+.products-grid {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.product-card img {
+    border: 1px solid #000000;
+    max-width: 100%;
+    height:40%;
+    margin-top: 10px;
+}
+
+/* 7. PIE DE PÁGINA (Footer) */
+.pie-pagina {
+    width: 100%;
+}
+
+.degradado-superior {
+    height: 15px;
+    background: linear-gradient(to right, #4b00ff, #007bff, #00d4ff);
+}
+
+.contenido-negro {
+    background-color: #222;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.contenido-negro p {
+    margin: 0;
+    font-size: 14px;
+}
